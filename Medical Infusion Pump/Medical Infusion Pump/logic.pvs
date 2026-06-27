@@ -1,0 +1,51 @@
+[logic.SDA]
+name=logic.SDA
+enabled=true
+color=4279638298
+conversion_type=0
+conv_options=0
+
+[logic.SCL]
+name=logic.SCL
+enabled=true
+color=4287582722
+conversion_type=0
+conv_options=0
+
+[logic.MOTOR]
+name=logic.MOTOR
+enabled=true
+color=4291559424
+conversion_type=0
+conv_options=0
+
+[logic.BTN]
+name=logic.BTN
+enabled=true
+color=4294277376
+conversion_type=0
+conv_options=0
+
+[General]
+decode_signals=0
+generated_signals=0
+views=1
+meta_objs=1
+
+[view0]
+scale=8.050674536673812e-7
+v_offset=-334
+splitter_state=@ByteArray(\0\0\0\xff\0\0\0\x1\0\0\0\x2\0\0\0}\0\0\x6\xfc\x1\0\0\0\x1\x1\0\0\0\x1\0)
+segment_display_mode=3
+offset=22 serialization::archive 14 0 0 0 0 8 25766732 59974623 75736780 196738 39687723 0 0 0 6
+zero_offset=22 serialization::archive 14 0 0 0 0 0 0 0 0 0 0 0 0 0 6
+logic.SDA\trace_height=32
+logic.SCL\trace_height=32
+logic.MOTOR\trace_height=32
+logic.BTN\trace_height=32
+
+[meta_obj0]
+type=selection
+assoc_view=0
+start_time=22 serialization::archive 14 0 0 0 0 8 25755984 94923977 80353311 3198720 54264718 0 0 0 6
+end_time=22 serialization::archive 14 0 0 0 0 8 25915362 86147215 76319890 67516631 30876292 0 0 0 6

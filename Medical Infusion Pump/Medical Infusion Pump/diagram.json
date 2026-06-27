@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "author": "GroupF",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 60,
+      "left": 80,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -200,
+      "left": 60,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -80,
+      "left": -160,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 10,
+      "left": -140,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 78,
+      "left": -140,
+      "rotate": 90,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 10,
+      "left": -220,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 78,
+      "left": -220,
+      "rotate": 90,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-logic-analyzer",
+      "id": "logic1",
+      "top": -300,
+      "left": -250,
+      "attrs": {
+        "channelNames": "SDA,SCL,MOTOR,BTN,ALARM,ACTIVE"
+      }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+
+    [ "lcd1:SDA", "esp:D21",   "green", [] ],
+    [ "lcd1:SCL", "esp:D22",   "green", [] ],
+    [ "lcd1:VCC", "esp:VIN",   "red",   [] ],
+    [ "lcd1:GND", "esp:GND.1", "black", [] ],
+
+    [ "btn1:1.l", "esp:D13",   "blue",  [] ],
+    [ "btn1:2.l", "esp:GND.1", "black", [] ],
+
+    [ "led1:A",  "esp:D2",    "orange", [] ],
+    [ "led1:C",  "r1:1",      "orange", [] ],
+    [ "r1:2",    "esp:GND.1", "black",  [] ],
+
+    [ "led2:A",  "esp:D19",   "green", [] ],
+    [ "led2:C",  "r2:1",      "green", [] ],
+    [ "r2:2",    "esp:GND.1", "black", [] ],
+
+    [ "logic1:D0",  "esp:D21",   "green",  [] ],
+    [ "logic1:D1",  "esp:D22",   "green",  [] ],
+    [ "logic1:D2",  "esp:D18",   "orange", [] ],
+    [ "logic1:D3",  "esp:D13",   "blue",   [] ],
+    [ "logic1:D4",  "esp:D2",    "red",    [] ],
+    [ "logic1:D5",  "esp:D19",   "green",  [] ],
+    [ "logic1:GND", "esp:GND.1", "black",  [] ]
+  ],
+  "dependencies": {}
+}
